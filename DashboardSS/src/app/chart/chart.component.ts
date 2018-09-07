@@ -19,9 +19,13 @@ export class ChartComponent implements AfterViewInit {
   };
   comp: any;
   comp2: any;
+  comp3: any;
+  comp4: any;
   ngAfterViewInit() {
     this.comp = document.getElementById('card');
     this.comp2 = document.getElementById('card2');
+    this.comp3 = document.getElementById('card3');
+    this.comp4 = document.getElementById('card4');
   }
 
   changeClass1() {
@@ -39,6 +43,24 @@ export class ChartComponent implements AfterViewInit {
           this.comp2.classList.remove('flipped');
       } else {
         this.comp2.classList.add('flipped');
+      }
+    }
+
+    changeClass3() {
+      if ( this.comp3.classList.contains('flipped') )
+      {
+          this.comp3.classList.remove('flipped');
+      } else {
+        this.comp3.classList.add('flipped');
+      }
+    }
+
+    changeClass4() {
+      if ( this.comp4.classList.contains('flipped') )
+      {
+          this.comp4.classList.remove('flipped');
+      } else {
+        this.comp4.classList.add('flipped');
       }
     }
 }
