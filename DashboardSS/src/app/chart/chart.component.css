@@ -144,7 +144,7 @@ p {
 }
 
 .card .front {
-  background: white;
+  background: white; /* TODAS LAS QUE NO SEAN LA PRIMERA*/
 }
 
 .card .back {
@@ -155,12 +155,12 @@ p {
   transform: rotateY( 180deg );
 }
 
-.container:first-child .card .front {
-  background: lightyellow;;
+.container:first-child .card .front { /* La primera*/
+  background: white;
 }
 
 .container:first-child .card .back {
-  background: lightgray;
+  background: #06AD4B;
 }
 
 .cardTitle {
