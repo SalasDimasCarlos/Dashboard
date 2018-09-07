@@ -26,42 +26,46 @@ export class ComboComponent implements AfterViewInit {
     this.canvas = document.getElementById('combinada-component');
     this.ctx = this.canvas.getContext('2d');
 
-    let myChart = new Chart(this.ctx, {
+    var chartData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        type: 'line',
+        label: 'Dataset 1',
+        borderColor: colors.blue,
+        borderWidth: 2,
+        fill: false,
+        data: [12, 5, 32, 15, 12, 3]
+      }, {
+        type: 'bar',
+        label: 'Dataset 2',
+        backgroundColor: colors.red,
+        data: [13, 19, 31, 5, 12, 7],
+        borderColor: 'white',
+        borderWidth: 2
+      }, {
+        type: 'bar',
+        label: 'Dataset 3',
+        backgroundColor: colors.green,
+        data: [19, 9, 13, 9, 5, 9]
+      }]
 
+    };
+
+
+    let myChart = new Chart(this.ctx, {
     type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                colors.red + ',.8)',
-                colors.orange + ',.8)',
-                colors.purple + ',.8)',
-                colors.green + ',.8)',
-                colors.grey + ',.8)',
-                colors.blue  + ',.8)'
-            ],
-            borderColor: [
-                colors.red,
-                colors.orange,
-                colors.purple,
-                colors.green,
-                colors.grey,
-                colors.blue
-            ],
-            borderWidth: 1
-        }]
-    },
+    data: chartData,
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+					responsive: true,
+					title: {
+						display: true,
+						text: 'Chart.js Combo Bar Line Chart'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: true
+					}
+				}
     });
   }
 }
