@@ -23,26 +23,55 @@ export class LineComponent implements AfterViewInit {
       	grey: 'rgb(158,158,158'
       };
 
+
+      let DataComponent = {
+        total: [32, 28, 44, 14, 17, 16, 20],
+        SEJ: [13, 19, 31, 5, 12, 7, 5],
+        DRSE: [19, 9, 13, 9, 5, 9,15]
+
+
+      }
+
     this.canvas = document.getElementById('lineadatos-component');
     this.ctx = this.canvas.getContext('2d');
+
+    var chartData = {
+      labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+      datasets: [{
+        type: 'line',
+        label: 'Total Trámites',
+        borderColor: colors.green,
+        borderWidth: 2,
+        fill: false,
+        data: DataComponent.total
+      }, {
+        type: 'line',
+        label: 'Validación SEJ',
+        borderColor: colors.orange,
+        borderWidth: 2,
+        fill: false,
+        data: DataComponent.SEJ
+      },{
+        type: 'line',
+        label: 'Validación DRSE',
+        borderColor: colors.blue,
+        borderWidth: 2,
+        fill: false,
+        data: DataComponent.DRSE
+      }]
+
+    };
+
     let myChart = new Chart(this.ctx, {
 
     type: 'line',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                colors.red + ',.8)'
-            ],
-            borderColor: [
-                colors.red,
-            ],
-            borderWidth: 1
-        }]
-    },
+    data: chartData,
     options: {
+				responsive: true,
+				tooltips: {
+					mode: 'index',
+					intersect: true
+				},
         scales: {
             yAxes: [{
                 ticks: {
