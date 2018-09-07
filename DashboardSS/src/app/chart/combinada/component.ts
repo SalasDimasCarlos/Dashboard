@@ -23,30 +23,38 @@ export class ComboComponent implements AfterViewInit {
       	grey: 'rgb(158,158,158'
       };
 
+    let DataComponent = {
+      total: [32, 28, 44, 14, 17, 16, 20],
+      cancelados: [13, 19, 31, 5, 12, 7, 5],
+      procedentes: [19, 9, 13, 9, 5, 9,15]
+
+
+    }
+
     this.canvas = document.getElementById('combinada-component');
     this.ctx = this.canvas.getContext('2d');
 
     var chartData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
       datasets: [{
         type: 'line',
-        label: 'Dataset 1',
+        label: 'Total Trámites',
         borderColor: colors.blue,
         borderWidth: 2,
         fill: false,
-        data: [12, 5, 32, 15, 12, 3]
+        data: DataComponent.total
       }, {
         type: 'bar',
-        label: 'Dataset 2',
+        label: 'Cancelados',
         backgroundColor: colors.red,
-        data: [13, 19, 31, 5, 12, 7],
+        data: DataComponent.cancelados,
         borderColor: 'white',
         borderWidth: 2
       }, {
         type: 'bar',
-        label: 'Dataset 3',
+        label: 'Procedentes',
         backgroundColor: colors.green,
-        data: [19, 9, 13, 9, 5, 9]
+        data: DataComponent.procedentes
       }]
 
     };
@@ -57,10 +65,6 @@ export class ComboComponent implements AfterViewInit {
     data: chartData,
     options: {
 					responsive: true,
-					title: {
-						display: true,
-						text: 'Chart.js Combo Bar Line Chart'
-					},
 					tooltips: {
 						mode: 'index',
 						intersect: true

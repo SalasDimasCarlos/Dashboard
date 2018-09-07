@@ -160,7 +160,7 @@ p {
 }
 
 .container:first-child .card .back {
-  background: #06AD4B;
+  background: white;
 }
 
 .cardTitle {
