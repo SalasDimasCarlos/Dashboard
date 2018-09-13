@@ -23,6 +23,8 @@
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
+    "save": "^2.3.2",
+    "xlsx": "^0.14.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
