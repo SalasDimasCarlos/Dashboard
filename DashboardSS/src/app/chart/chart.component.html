@@ -1,71 +1,13 @@
-<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
 
-<div class="wrapper cards">
-  <div class="container">
-    <div (click)="changeClass1()" id="card" class="card">
-        <div id="chart_canvas">
-          <div class="front">
-            <pastel></pastel>
-          </div>
-        </div>
-        <div id="chart_canvas" class="back">
-          <div class="content">
-              <combinada></combinada>
-
-          </div>
-        </div>
-
-    </div>
-  </div>
-
-   <div class="container">
-    <div (click)="changeClass2()" id="card2" class="card">
-      <div id="chart_canvas">
-        <div class="front">
-          <lineadatos></lineadatos>
-        </div>
-      </div>
-
-      <div class="back">
-        <div class="content">
-          <h3 class="cardTitle">Información</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate.</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div *ngFor="let item of data">
+	<div class="slide-down-delay four col">
+	<div class="box">
+		<span class="original">
+			<p>{{item.ename}}</p>
+		</span>
+		<div class="overlay">
+			<span>Complete Information</span>
+		</div>
+	</div>
 </div>
-
-<div class="wrapper cards">
-   <div class="container">
-    <div (click)="changeClass4()" id="card4" class="card">
-        <div class="front">
-        </div>
-
-      <div class="back">
-        <div class="content">
-          <h3 class="cardTitle">Información</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate.</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-     <div class="container">
-      <div (click)="changeClass3()" id="card3" class="card">
-          <div class="front">
-
-          </div>
-          <div class="back">
-            <div class="content">
-              <h3 class="cardTitle">Información</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate.</p>
-
-            </div>
-          </div>
-      </div>
-    </div>
 </div>

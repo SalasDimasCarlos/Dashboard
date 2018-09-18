@@ -17,50 +17,31 @@ export class ChartComponent implements AfterViewInit {
   	purple: 'rgb(10, 27, 15)',
   	grey: 'rgb(201, 203, 207)'
   };
-  comp: any;
-  comp2: any;
-  comp3: any;
-  comp4: any;
+
+
+    data: any = [{
+    eid: '1',
+    ename: 'SOLICITUDES POR VALIDAR / ANALIZAR'
+    },{
+    eid: '2',
+    ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA'
+    },{
+    eid: '3',
+    ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL'
+    },{
+    eid: '4',
+    ename: 'AUDITORÍA DE REVALIDACIONES'
+    },{
+    eid: '5',
+    ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)'
+    },{
+    eid: '6',
+    ename: 'REGISTRO DE CONTRATACIÓN'
+    }];
+
+
   ngAfterViewInit() {
-    this.comp = document.getElementById('card');
-    this.comp2 = document.getElementById('card2');
-    this.comp3 = document.getElementById('card3');
-    this.comp4 = document.getElementById('card4');
   }
 
-  changeClass1() {
-    if ( this.comp.classList.contains('flipped') )
-    {
-        this.comp.classList.remove('flipped');
-    } else {
-      this.comp.classList.add('flipped');
-    }
-  }
 
-    changeClass2() {
-      if ( this.comp2.classList.contains('flipped') )
-      {
-          this.comp2.classList.remove('flipped');
-      } else {
-        this.comp2.classList.add('flipped');
-      }
-    }
-
-    changeClass3() {
-      if ( this.comp3.classList.contains('flipped') )
-      {
-          this.comp3.classList.remove('flipped');
-      } else {
-        this.comp3.classList.add('flipped');
-      }
-    }
-
-    changeClass4() {
-      if ( this.comp4.classList.contains('flipped') )
-      {
-          this.comp4.classList.remove('flipped');
-      } else {
-        this.comp4.classList.add('flipped');
-      }
-    }
 }
