@@ -1,13 +1,15 @@
 
-<div *ngFor="let item of data">
-	<div class="slide-down-delay four col">
-	<div class="box">
-		<span class="original">
-			<p>{{item.ename}}</p>
-		</span>
-		<div class="overlay">
-			<span>Complete Information</span>
+<div class="cards">
+	<div *ngFor="let item of data">
+		<div class="slide-down-delay four col">
+		<div class="box">
+			<span class="original">
+				<p>{{item.ename}}</p>
+			</span>
+			<div class="overlay">
+				<span>Complete Information</span>
+			</div>
 		</div>
 	</div>
-</div>
+	</div>
 </div>

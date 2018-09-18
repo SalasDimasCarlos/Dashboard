@@ -3,12 +3,10 @@
   width: 30em;
 }
 
-.cardz{
- background-color: 434447;
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -22,19 +20,20 @@ a{
 
 /* GRID */
 
-.grid {
-max-width: 940px;
-width: 100%;
-margin: auto;
-}
-
 .four {
-	width: 320px;
+	width: 20em;
 }
 
-.centr {
-    margin-left: auto;
-    margin-right: auto;
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 479px){
+
+  .four {
+    width: 90%;
+  }
+
 }
 
 /* COLUMNS */
@@ -42,8 +41,7 @@ margin: auto;
 .col {
   display: block;
   margin: auto;
-  padding: 10px;
-  float: left;
+  padding: 1em;
 }
 
 .col:first-of-type {
