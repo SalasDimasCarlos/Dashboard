@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'chart-component',
@@ -20,27 +21,41 @@ export class ChartComponent implements AfterViewInit {
 
 
     data: any = [{
-    eid: '1',
+    eid: 'item1',
     ename: 'SOLICITUDES POR VALIDAR / ANALIZAR'
     },{
-    eid: '2',
+    eid: 'item2',
     ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA'
     },{
-    eid: '3',
+    eid: 'item3',
     ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL'
     },{
-    eid: '4',
+    eid: 'item4',
     ename: 'AUDITORÍA DE REVALIDACIONES'
     },{
-    eid: '5',
+    eid: 'item5',
     ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)'
     },{
-    eid: '6',
+    eid: 'item6',
     ename: 'REGISTRO DE CONTRATACIÓN'
     }];
 
 
   ngAfterViewInit() {
+      $(".four").click(function () {
+      var target = $(this).attr("id");
+
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).addClass("inactive");
+
+      } else {
+        $(this).removeClass("inactive");
+        $(this).addClass("active");
+
+       }
+
+    });
   }
 
 
