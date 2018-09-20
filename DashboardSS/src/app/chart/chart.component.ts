@@ -39,9 +39,23 @@ export class ChartComponent implements AfterViewInit {
 
   ngAfterViewInit() {
 
+    function timer(property, value)
+    {
+      setTimeout(function(){
+        if (value == true)
+        {
+          $(property).find(".content_widget").css("display","block");
+            $(property).find(".content").css("display","none");
+        } else {
+          $(property).find(".content_widget").css("display","none");
+            $(property).find(".content").css("display","block");
+        }
+      }, 1000);
+
+    }
+
     function calculate(target)
     {
-      //console.log(target[4]);
       var control = target[4];
       var string = "item";
       var clase = "move-down";
@@ -50,32 +64,9 @@ export class ChartComponent implements AfterViewInit {
       {
         string = "."+string+num;
         var $clone = $(string).clone();
-
-        /*
-        num = num + 1;
-        string = "."+string+num;
-        console.log(string);
-        $(string).addClass("move-down");
-
-        string ="item";
-        num = num + 1;
-        string = "."+string+num;
-        console.log(string);
-        $(string).addClass("move-down");*/
-
       }
 
     }
-
-     let miPrimeraPromise = new Promise((resolve, reject) => {
-      // Llamamos a resolve(...) cuando lo que estabamos haciendo finaliza con éxito, y reject(...) cuando falla.
-      // En este ejemplo, usamos setTimeout(...) para simular código asíncrono.
-      // En la vida real, probablemente uses algo como XHR o una API HTML5.
-      setTimeout(function(){
-        resolve("¡Éxito!"); // ¡Todo salió bien!
-      }, 1800);
-    });
-
 
       $(".four").click(function () {
       var target = $(this).attr("id");
@@ -85,6 +76,7 @@ export class ChartComponent implements AfterViewInit {
       {
         $(".active").addClass("inactive");
         $(".active").removeClass("active");
+        timer(this, true);
       }
 
       var comp = this;
@@ -95,22 +87,17 @@ export class ChartComponent implements AfterViewInit {
 
       }, 1000);
 
-
-/*
-      miPrimeraPromise.then((successMessage) => {
-
-        $('html,body').animate({
-          scrollTop: $(this).offset().top
-      }, 'slow');
-    });*/
-
       if($(this).hasClass("active")){
         $(this).removeClass("active");
         $(this).addClass("inactive");
+        timer(this, true);
 
       } else {
         $(this).removeClass("inactive");
         $(this).addClass("active");
+        timer(this, false);
+
+        //console.log($(this).find(".content_widget"));
 
        }
 

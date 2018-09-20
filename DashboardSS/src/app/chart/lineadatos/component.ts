@@ -68,6 +68,9 @@ export class LineComponent implements AfterViewInit {
     data: chartData,
     options: {
 				responsive: true,
+        animation: {
+            duration: 1500
+          },
 				tooltips: {
 					mode: 'index',
 					intersect: true

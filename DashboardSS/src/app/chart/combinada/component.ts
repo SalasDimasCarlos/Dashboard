@@ -19,7 +19,7 @@ export class ComboComponent implements AfterViewInit {
       $('#cominada-components').append("<canvas id='combinada-component"+acum+"'></canvas>");
     }
     */
-    
+
     $('#cominada-components').append("<canvas id='combinada-component"+acum+"'></canvas>");
      let colors = {
          red: 'rgb(244,67,54',
@@ -72,6 +72,9 @@ export class ComboComponent implements AfterViewInit {
     data: chartData,
     options: {
 					responsive: true,
+          animation: {
+              duration: 1500
+            },
 					tooltips: {
 						mode: 'index',
 						intersect: true
