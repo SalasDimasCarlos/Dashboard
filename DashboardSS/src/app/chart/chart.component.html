@@ -1,17 +1,73 @@
 
 <div class="cards">
-	<div *ngFor="let item of data">
-		<div  id="{{item.eid}}" class="{{item.eid}} four">
+		<div  id="{{data[0].eid}}" class="{{data[0].eid}} four">
 		<div class="box">
-			<span>
-				<p>{{item.ename}}</p>
-			</span>
-				<div>
-					<span></span>
-				</div>
+			<div class="heading">
+				<p>{{data[0].ename}}</p>
+			</div>
+					<pastel></pastel>
 		</div>
 	</div>
 
+	<div  id="{{data[1].eid}}" class="{{data[1].eid}} four">
+	<div class="box">
+		<div class="heading">
+			<p>{{data[1].ename}}</p>
+		</div>
+				
+	</div>
+</div>
+
+	<div  id="{{data[2].eid}}" class="{{data[2].eid}} four">
+	<div class="box">
+		<div class="heading">
+			<p>{{data[2].ename}}</p>
+		</div>
+				
+		</div>
+	</div>
+
+<div  id="{{data[3].eid}}" class="{{data[3].eid}} four">
+<div class="box">
+	<div class="heading">
+		<p>{{data[3].ename}}</p>
+	</div>
+			
+</div>
+</div>
+
+<div  id="{{data[4].eid}}" class="{{data[4].eid}} four">
+<div class="box">
+	<div class="heading">
+		<p>{{data[4].ename}}</p>
+	</div>
+			
+	</div>
+</div>
+
+<div  id="{{data[5].eid}}" class="{{data[5].eid}} four">
+<div class="box">
+	<div class="heading">
+		<p>{{data[5].ename}}</p>
 	</div>
 
 </div>
+</div>
+
+</div>
+
+
+<!--div class="cards">
+	<div *ngFor="let item of data; let first = first">
+		<div  id="{{item.eid}}" class="{{item.eid}} four">
+		<div class="box">
+			<div class="heading">
+				<p>{{item.ename}}</p>
+			</div>
+					<pastel></pastel>
+		</div>
+	</div>
+
+</div>
+
+</div-->

@@ -9,35 +9,31 @@ import * as $ from 'jquery';
 
 export class ChartComponent implements AfterViewInit {
   title = 'Chart';
-  colors = {
-  	red: 'rgb(21,0,0)',
-  	orange: 'rgb(25, 11, 0)',
-  	yellow: 'rgb(25, 21, 53)',
-  	green: 'rgb(11, 25, 3)',
-  	blue: 'rgb(30, 13, 22)',
-  	purple: 'rgb(10, 27, 15)',
-  	grey: 'rgb(201, 203, 207)'
-  };
-
 
     data: any = [{
     eid: 'item1',
-    ename: 'SOLICITUDES POR VALIDAR / ANALIZAR'
+    ename: 'SOLICITUDES POR VALIDAR / ANALIZAR',
+    widget: 'pastel'
     },{
     eid: 'item2',
-    ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA'
+    ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA',
+    widget: 'hey'
     },{
     eid: 'item3',
-    ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL'
+    ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL',
+    widget: 'hey'
     },{
     eid: 'item4',
-    ename: 'AUDITORÍA DE REVALIDACIONES'
+    ename: 'AUDITORÍA DE REVALIDACIONES',
+    widget: 'hey'
     },{
     eid: 'item5',
-    ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)'
+    ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)',
+    widget: 'hey'
     },{
     eid: 'item6',
-    ename: 'REGISTRO DE CONTRATACIÓN'
+    ename: 'REGISTRO DE CONTRATACIÓN',
+    widget: 'hey'
     }];
 
 

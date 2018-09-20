@@ -1,10 +1,19 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as Chart from 'chart.js'
+import * as $ from 'jquery';
 
 @Component({
   selector: 'pastel',
   templateUrl: './pastel.html'
 })
+
+/*
+    title: {
+      display: true,
+      text: 'Trámites de la Secretaría de Educación por reposicion de personal'
+    },*/
+
+
 
 export class PieComponent implements AfterViewInit {
   title = 'Pastel de datos';
@@ -23,40 +32,31 @@ export class PieComponent implements AfterViewInit {
       	grey: 'rgb(158,158,158'
       };
 
-    this.canvas = document.getElementById('pastel-component');
+    this.canvas = document.getElementById("pastel-component");
+console.log(this.canvas);
     this.ctx = this.canvas.getContext('2d');
     let myChart = new Chart(this.ctx, {
 
-    type: 'pie',
+    type: 'doughnut',
     data: {
-        labels: ["Trámites Cancelados", "Trámites Procedentes"],
+        labels: ["Trámites Procedentes","Trámites Cancelados"],
         datasets: [{
-            label: 'Total de trámites del Periodo',
             data: [150,78],
             backgroundColor: [
-                colors.red + ',.8)',
-                colors.green + ',.8)'
+                colors.green + ',1)',
+                colors.red + ',1)'
             ],
             borderColor: [
-                colors.red,
-                colors.green,
+                colors.green + ',1)',
+                colors.red + ',1)'
             ],
             borderWidth: 1
         }]
     },
     options: {
-        title: {
-          display: true,
-          text: 'Trámites de la Secretaría de Educación por reposicion de personal'
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+      cutoutPercentage: 60
+			}
+    },
     });
   }
 }
