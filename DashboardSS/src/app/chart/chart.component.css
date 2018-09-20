@@ -54,7 +54,7 @@ a{
 
 .active {
     width: 60em;
-    height: 50em;
+    height: 40em;
     -webkit-transition: width 1.5s, height 1.5s; /* For Safari 3.1 to 6.0 */
     transition: width 1.5s, height 1.5s;
 }
@@ -65,6 +65,29 @@ a{
     -webkit-transition: width 1s, height 1.5s; /* For Safari 3.1 to 6.0 */
     transition: width 1.5s, height 1.5s;
 }
+
+.move-down {
+    position: sticky;
+    transform: translate(0,20em);
+    -webkit-transform: translate(0,20em);
+    -o-transform: translate(0,20em);
+    -moz-transform: translate(0,20em);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+
+.move-up {
+    transform: translate(0,-20em);
+    -webkit-transform: translate(0,-20em);
+    -o-transform: translate(0,-20em);
+    -moz-transform: translate(0,-20em);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
 
 /* RESPONSIVE */
 

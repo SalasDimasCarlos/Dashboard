@@ -33,7 +33,6 @@ export class PieComponent implements AfterViewInit {
       };
 
     this.canvas = document.getElementById("pastel-component");
-console.log(this.canvas);
     this.ctx = this.canvas.getContext('2d');
     let myChart = new Chart(this.ctx, {
 
@@ -54,9 +53,11 @@ console.log(this.canvas);
         }]
     },
     options: {
-      cutoutPercentage: 60
+      cutoutPercentage: 85,
+      animation: {
+          duration: 1500
+        }
 			}
-    },
     });
-  }
+}
 }
