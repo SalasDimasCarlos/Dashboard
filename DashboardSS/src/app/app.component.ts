@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import * as $ from 'jquery';
+
 //import {ExcelService} from './services/excel.service';
 
 @Component({
@@ -8,5 +10,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DashboardSS';
+
+  ngAfterViewInit() {
+/*
+    console.log("Reading data");
+    $.get('assets/data_comas.txt', function(data) {
+      //console.log(data);
+      //var lines = data.split(/\r\n|\r|\n/).length;
+      //console.log(lines);
+        console.log("Data Read");
+
+    }, 'text');*/
+  }
 
 }

@@ -76,7 +76,7 @@ export class ChartComponent implements AfterViewInit {
       {
         $(".active").addClass("inactive");
         $(".active").removeClass("active");
-        timer(this, true);
+
       }
 
       var comp = this;
