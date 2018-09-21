@@ -19,38 +19,9 @@ export class PieComponent implements AfterViewInit {
   title = 'Pastel de datos';
   canvas: any;
   ctx: any;
-
-  data: any = [{
-  cantidad: 53,
-  ename: 'SOLICITUDES POR VALIDAR / ANALIZAR',
-  widget: 'pastel'
-  },{
-  eid: 'item2',
-  ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA',
-  widget: 'hey'
-  },{
-  eid: 'item3',
-  ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL',
-  widget: 'hey'
-  },{
-  eid: 'item4',
-  ename: 'AUDITORÍA DE REVALIDACIONES',
-  widget: 'hey'
-  },{
-  eid: 'item5',
-  ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)',
-  widget: 'hey'
-  },{
-  eid: 'item6',
-  ename: 'REGISTRO DE CONTRATACIÓN',
-  widget: 'hey'
-  }];
-
+  ctx2: any;
 
   ngAfterViewInit() {
-
-
-
     let colors = {
       	red: 'rgb(244,67,54',
       	orange: 'rgb(255, 152, 0',
@@ -61,20 +32,21 @@ export class PieComponent implements AfterViewInit {
       	grey: 'rgb(158,158,158'
       };
 
-    this.canvas = document.getElementById("pastel-component");
-    this.ctx = this.canvas.getContext('2d');
+    this.canvas = $(".pastel-component");
+    console.log(this.canvas);
+    this.ctx = this.canvas[0].getContext('2d');
     let myChart = new Chart(this.ctx, {
     type: 'doughnut',
     data: {
-        labels: ["Trámites Pendientes: 53"],
+        labels: ["Trámites Pendientes"],
         datasets: [{
             data: [53,70-53],
             backgroundColor: [
-                colors.green + ',1)',
+                colors.blue + ',1)',
                 'rgb(0, 0,0,0)'
             ],
             borderColor: [
-                colors.green + ',1)',
+                colors.blue + ',1)',
                 'rgb(0, 0,0,0)'
             ],
             borderWidth: 1
@@ -88,5 +60,119 @@ export class PieComponent implements AfterViewInit {
         }
 			}
     });
+
+    /*  SECOND PASTEL  */
+    this.ctx2 = this.canvas[1].getContext('2d');
+    myChart = new Chart(this.ctx2, {
+    type: 'doughnut',
+    data: {
+        labels: ["Solicitudes Fuera de Nómina"],
+        datasets: [{
+            data: [26345,102077-26345],
+            backgroundColor: [
+                colors.orange + ',1)',
+                'rgb(0, 0,0,0)'
+            ],
+            borderColor: [
+                colors.orange + ',1)',
+                'rgb(0, 0,0,0)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      responsive: true,
+      cutoutPercentage: 85,
+      animation: {
+          duration: 1800
+        }
+			}
+    });
+
+      /*  THIRD PASTEL  */
+      this.ctx2 = this.canvas[2].getContext('2d');
+      myChart = new Chart(this.ctx2, {
+      type: 'doughnut',
+      data: {
+          labels: ["Revalidaciones"],
+          datasets: [{
+              data: [725,3000-725],
+              backgroundColor: [
+                  colors.purple + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderColor: [
+                  colors.purple + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        responsive: true,
+        cutoutPercentage: 85,
+        animation: {
+            duration: 1000
+          }
+  			}
+      });
+
+      /*  FOURTH PASTEL  */
+      this.ctx2 = this.canvas[3].getContext('2d');
+      myChart = new Chart(this.ctx2, {
+      type: 'doughnut',
+      data: {
+          labels: ["Nómina diferente"],
+          datasets: [{
+              data: [183,300-183],
+              backgroundColor: [
+                  colors.grey + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderColor: [
+                  colors.grey + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        responsive: true,
+        cutoutPercentage: 85,
+        animation: {
+            duration: 1200
+          }
+  			}
+      });
+
+      /*  FIFTH PASTEL  */
+      this.ctx2 = this.canvas[4].getContext('2d');
+      myChart = new Chart(this.ctx2, {
+      type: 'doughnut',
+      data: {
+          labels: ["Trámites procedentes no completados"],
+          datasets: [{
+              data: [700,1500-700],
+              backgroundColor: [
+                  colors.green + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderColor: [
+                  colors.green + ',1)',
+                  'rgb(0, 0,0,0)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        responsive: true,
+        cutoutPercentage: 85,
+        animation: {
+            duration: 1500
+          }
+  			}
+      });
+
+
 }
 }

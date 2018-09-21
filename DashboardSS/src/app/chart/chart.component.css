@@ -92,7 +92,31 @@ a{
     -o-transition: all 1s ease-in-out;
 }
 
+/*  TABLES DESIGN*/
+table.minimalistBlack {
+  font-family: 'Helvetica Neue', Helvetica;
+  margin-left: 5%;
+  width: 90%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.minimalistBlack td,
+table.minimalistBlack th {
+  border: 1px solid #000000;
+}
 
+table.minimalistBlack thead {
+  background: #2196f3;
+}
+table.minimalistBlack thead th{
+  font-size: .9em;
+  color: #000000;
+  text-align: center;
+}
+table.minimalistBlack tbody div th{
+  background-color:#ffffff;
+  font-size: .8em;
+}
 /* RESPONSIVE */
 
 

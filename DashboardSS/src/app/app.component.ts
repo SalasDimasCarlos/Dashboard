@@ -12,15 +12,7 @@ export class AppComponent {
   title = 'DashboardSS';
 
   ngAfterViewInit() {
-/*
-    console.log("Reading data");
-    $.get('assets/data_comas.txt', function(data) {
-      //console.log(data);
-      //var lines = data.split(/\r\n|\r|\n/).length;
-      //console.log(lines);
-        console.log("Data Read");
 
-    }, 'text');*/
   }
 
 }

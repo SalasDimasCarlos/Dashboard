@@ -7,10 +7,33 @@
 			</div>
 			<div class="content_widget">
 				<pastel></pastel>
-				<h2>53</h2>
+				<h2>{{KPI1Data.length - 1}}</h2>
 			</div>
 			<div class="content">
-				<combinada></combinada>
+				<div style="height:30em; overflow:auto;">
+					<table class="minimalistBlack">
+						<thead>
+							<tr>
+									<th>{{KPI1Data[0].numero}}</th>
+									<th>{{KPI1Data[0].clave}}</th>
+									<th>{{KPI1Data[0].dias}}</th>
+									<th>{{KPI1Data[0].nivel}}</th>
+									<th>{{KPI1Data[0].DRSE}}</th>
+									<th>{{KPI1Data[0].motivo}}</th>
+							</tr>
+						</thead>
+							<tbody>
+									    <tr *ngFor="let item of KPI1Data;">
+													<th *ngIf="item != KPI1Data[0]">{{item.numero}}</th>
+													<th *ngIf="item != KPI1Data[0]">{{item.clave}}</th>
+													<th *ngIf="item != KPI1Data[0]">{{item.dias}}</th>
+													<th *ngIf="item != KPI1Data[0]">{{item.nivel}}</th>
+													<th *ngIf="item != KPI1Data[0]">{{item.DRSE}}</th>
+													<th *ngIf="item != KPI1Data[0]">{{item.motivo}}</th>
+									    </tr>
+							</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -21,10 +44,12 @@
 			<p>{{data[1].ename}}</p>
 		</div>
 		<div class="content_widget">
-			<lineadatos></lineadatos>
+			<pastel></pastel>
+			<h2>{{KRI1Data[0].cantidad}}</h2>
+
 		</div>
 		<div class="content">
-
+			<lineadatos></lineadatos>
 		</div>
 
 	</div>
@@ -36,10 +61,12 @@
 			<p>{{data[2].ename}}</p>
 		</div>
 			<div class="content_widget">
-				<combinada></combinada>
+				<h3>42% Procedentes</h3>
+				<h3>37% No Procedentes</h3>
+				<h3>31% Redictaminados</h3>
 			</div>
 			<div class="content">
-
+					<combinada></combinada>
 			</div>
 		</div>
 	</div>
@@ -51,7 +78,7 @@
 	</div>
 	<div class="content_widget">
 		<pastel></pastel>
-
+		<h3>725 Revalidaciones</h3>
 	</div>
 	<div class="content">
 
@@ -66,7 +93,8 @@
 		<p>{{data[4].ename}}</p>
 	</div>
 	<div class="content_widget">
-
+		<pastel></pastel>
+		<h3>183 Registros</h3>
 	</div>
 	<div class="content">
 
@@ -81,7 +109,8 @@
 		<p>{{data[5].ename}}</p>
 	</div>
 	<div class="content_widget">
-
+		<pastel></pastel>
+		<h3>42% de los Trámites</h3>
 	</div>
 	<div class="content">
 
