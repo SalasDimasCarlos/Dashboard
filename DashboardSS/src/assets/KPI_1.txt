@@ -51,4 +51,3 @@
 179387	3	PREESCOLAR	CENTRO 1	07. Vacante temporal por Cambio de Actividad
 179388	3	PRIMARIA	ALTOS NORTE	37. Baja por Pasar a Otro Empleo
 179389	3	PRIMARIA	COSTA-SIERRA OCCIDENTAL	44. Licencia por Gravidez
-
