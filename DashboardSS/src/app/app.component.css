@@ -1,5 +1,159 @@
+
+/*    CONTAINER */
 .container {
   display: flex;
   justify-content: center;
-  padding-left: 5%;
+  /*opacity: 0;*/
+  padding-left: 5em;
+  -webkit-transition:  opacity .5s linear;
+  transition: opacity .5s linear;
 }
+
+span {
+  font-size: .8em;
+}
+
+.padding {
+  -webkit-transition:  padding-left .4s ease-in-out;
+  transition: padding-left .4s ease-in-out;
+}
+
+.appears {
+  opacity: 1;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+svg circle {
+  fill: #ffffff;
+}
+
+.left-navigation {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 4em;
+  background-color: #202124;
+
+}
+
+
+
+/* NAVIGATION ANIMATION */
+nav {
+  padding-top: 2rem;
+  transform: translate3d(0, 0, 0);
+  background-color: #202124;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all .4s ease;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5em;
+    font-weight: 1em;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    transition: color .15s ease;
+
+}
+
+nav a:hover,
+nav a:focus,
+nav a:hover circle {
+  color: green;
+  fill: green;
+
+}
+
+nav a:active {
+  background-color: white;
+}
+
+nav a span {
+  display: inline-block; padding: 0 1rem;
+  vertical-align: middle;
+}
+
+button {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.area {
+  top: 0;
+}
+
+.area, .area::before, .area::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.area::before, .area::after {
+  content: '';
+}
+.area::before {
+  top: .7rem;
+}
+.area::after {
+  top: 1.4rem;
+}
+
+
+button.trigger .area {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: .1s;
+
+
+}
+
+button.trigger .area::before {
+  opacity: 0;
+}
+
+button.trigger .area::after {
+  transform: translate3d(0, -22px, 0) rotate(-270deg);
+  transition-delay: .1s;
+}
+
+.shown {
+  width: 11em;
+}
+
+.grow-up {
+  padding-left: 11em;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* ENDS ANIMATION NAVIGATION */

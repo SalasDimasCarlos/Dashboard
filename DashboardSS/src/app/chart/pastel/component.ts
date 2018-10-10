@@ -33,7 +33,7 @@ export class PieComponent implements AfterViewInit {
       };
 
     this.canvas = $(".pastel-component");
-    console.log(this.canvas);
+    //console.log(this.canvas);
     this.ctx = this.canvas[0].getContext('2d');
     let myChart = new Chart(this.ctx, {
     type: 'doughnut',

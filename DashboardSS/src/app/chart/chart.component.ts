@@ -142,6 +142,8 @@ export class ChartComponent implements AfterViewInit {
       $(".four").click(function () {
       var target = $(this).attr("id");
       //calculate(target);
+      //console.log(target);
+
 
       if($(".active").attr("id") != target)
       {
@@ -150,27 +152,44 @@ export class ChartComponent implements AfterViewInit {
 
       }
 
+      var $targets = $(".four");
+
+      $targets.each(function(i){
+        if($(this).attr("id") != target)
+        {
+          $(this).addClass("fadeOutUp animated");
+        }
+      });
+      var $targets = $(".largest");
+
+      $targets.each(function(i){
+        if($(this).attr("id") != target)
+        {
+          $(this).addClass("fadeOutUp animated");
+        }
+      });
+
       var comp = this;
       setTimeout(function(){
           $('html,body').animate({
             scrollTop: $(comp).offset().top
         }, 'slow');
-
       }, 1000);
+      
+      let este = this;
+      setTimeout(function() {
+        if($(este).hasClass("active")){
+          $(este).removeClass("active");
+          $(este).addClass("inactive");
+          timer(este, true);
 
-      if($(this).hasClass("active")){
-        $(this).removeClass("active");
-        $(this).addClass("inactive");
-        timer(this, true);
+        } else {
+          $(este).removeClass("inactive");
+          $(este).addClass("active");
+          timer(este, false);
 
-      } else {
-        $(this).removeClass("inactive");
-        $(this).addClass("active");
-        timer(this, false);
-
-        //console.log($(this).find(".content_widget"));
-
-       }
+        }
+      },1000);
 
     });
   }
