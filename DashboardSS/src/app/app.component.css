@@ -1,4 +1,53 @@
 
+/*    CONTENT PAGE */
+
+#content_page {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5em;
+}
+
+
+#content_map {
+  width: 90%;
+  
+  margin-top: 2em;
+}
+
+#content_map {
+  display: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  background-color: #ffffff;
+}
+
+.navigation {
+  width: 100%;
+  display: block;
+  position: static;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+  0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.item {
+  display: inline-block;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.item:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+
 /*    CONTAINER */
 .container {
   display: flex;
@@ -39,10 +88,10 @@ svg circle {
 .left-navigation {
   position: fixed;
   z-index: 2;
-  top: 0;
-  bottom: 0;
+  top: 5em;
+  /*bottom: 0;*/
   width: 4em;
-  background-color: #202124;
+  background-color: green;
 
 }
 
@@ -52,7 +101,7 @@ svg circle {
 nav {
   padding-top: 2rem;
   transform: translate3d(0, 0, 0);
-  background-color: #202124;
+  background-color: green;
   overflow-x: hidden;
   overflow-y: auto;
   transition: all .4s ease;
@@ -73,8 +122,8 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a:hover circle {
-  color: green;
-  fill: green;
+  color: #202124;
+  fill: #202124;
 
 }
 

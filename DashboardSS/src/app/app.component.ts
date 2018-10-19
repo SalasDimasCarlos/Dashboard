@@ -9,7 +9,7 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tablero de Estadísticas';
+  title = 'Titulo del Sitio';
   loadComponent = false;
 
 
@@ -31,9 +31,105 @@ export class AppComponent {
     }
   }
 
+/*
+  initialize(setMap) {
+
+    var mapOptions;
+    var pyrmont = new google.maps.LatLng(20.684697,-103.395303);
+
+    /* MAP OPTIONS - MAP STYLE */
+/*    mapOptions = {
+      center: pyrmont,
+      zoom: 5,
+      mapTypeId: 'roadmap',
+      scrollwheel: false,
+      styles: [
+      {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "lightness": 100
+              },
+              {
+                  "visibility": "simplified"
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "visibility": "on"
+              },
+              {
+                  "color": "#C6E2FF"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "color": "#C5E3BF"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "color": "#D1D1B8"
+              }
+          ]
+      }]
+    };
+
+
+    mapContent = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    // a new Info Window is created
+    infoWindow = new google.maps.InfoWindow();
+
+    // Event that closes the Info Window with a click on the map
+    google.maps.event.addListener(mapContent, 'click', function() {
+      infoWindow.close();
+    });
+
+    if(setMap == "location") {
+      this.displayMarkers("location");
+
+    }
+    if(setMap == "nearMe") {
+      this.displayMarkers("nearMe");
+
+    }
+    if (setMap == "needsMe") {
+      this.displayMarkers("needsMe");
+    }
+
+  }*/
+
+    public NextPage() {
+      //console.log("Hello");
+      var next = $("#content_page");
+      next.addClass("fadeOutLeft");
+      next.addClass("animated");
+
+
+      next = $("#content_map");
+      next.css("display", "block");
+      next.addClass("fadeInRight");
+      next.addClass("animated");
+
+    }
+
 
   public loadMyComponent() {
-
+    //
     var transitionEvent = this.whichTransitionEvent();
     let container = $("#container");
 

@@ -1,53 +1,76 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+<header>
+      <!--div style="text-align:center">
+        <h3>
+          {{ title }}
+        </h3>
+      </div-->
 
-<nav id="menu" class="left-navigation slideInLeft animated">
-    <button id="trigger-menu" (click)="show()" type="button" title="Menu"><span class="area"><span class="visuallyhidden">Menu</span></span></button>
-    <a href="#" title="" (click)="loadMyComponent()">
-        <svg title="" viewBox="0 0 512 512">
-            <circle cx="256" cy="256" r="256"/>
-
-        </svg>
-        <span>Item #</span>
-    </a>
-    <a href="#" title="">
-        <svg title="" viewBox="0 0 512.002 512.002">
-            <circle cx="256.001" cy="256" r="256"/>
-        </svg>
-        <span>Item #</span>
-    </a>
-    <a href="#" title="">
-        <svg title="" viewBox="0 0 512.002 512.002">
-            <circle cx="256.001" cy="256" r="256"/>
-
-        </svg>
-        <span>Item #</span>
-    </a>
-    <a href="#" title="Pinterest de Nicolas Guenin">
-        <svg title="" viewBox="0 0 512 512">
-            <circle cx="256" cy="256" r="256"/>
-
-        </svg>
-        <span>Item #</span>
-    </a>
-    <a href="#" title="">
-        <svg title="" viewBox="0 0 512 512">
-            <circle cx="256" cy="256" r="256"/>
-        </svg>
-        <span>Item #</span>
-    </a>
-</nav>
-
-  <div style="text-align:center">
-    <h2>
-      {{ title }}
-    </h2>
+  <div class="navigation">
+    <a href="#" class="item" id="logo">Inicio</a>
+    <a href="#" (click)="NextPage()" class="item">Escuelas</a>
+    <a href="#" class="item">Opcion</a>
+    <a href="#" class="item">Opcion</a>
+    <a href="#" class="item">Opcion</a>
+    <a href="#" class="item">Opcion</a>
+    <a href="#" class="item">Opcion</a>
   </div>
+</header>
 
-<main>
-<section>
-    <div id="container" class="container">
-      <chart-component *ngIf="loadComponent"></chart-component>
+
+<div id="content_page">
+  <nav id="menu" class="left-navigation slideInLeft animated">
+      <button id="trigger-menu" (click)="show()" type="button" title="Menu"><span class="area"><span class="visuallyhidden">Menu</span></span></button>
+      <a href="#" title="" (click)="loadMyComponent()">
+          <svg title="" viewBox="0 0 512 512">
+              <circle cx="256" cy="256" r="256"/>
+
+          </svg>
+          <span>Item #</span>
+      </a>
+      <a href="#" title="">
+          <svg title="" viewBox="0 0 512.002 512.002">
+              <circle cx="256.001" cy="256" r="256"/>
+          </svg>
+          <span>Item #</span>
+      </a>
+      <a href="#" title="">
+          <svg title="" viewBox="0 0 512.002 512.002">
+              <circle cx="256.001" cy="256" r="256"/>
+
+          </svg>
+          <span>Item #</span>
+      </a>
+      <a href="#" title="Pinterest de Nicolas Guenin">
+          <svg title="" viewBox="0 0 512 512">
+              <circle cx="256" cy="256" r="256"/>
+
+          </svg>
+          <span>Item #</span>
+      </a>
+      <a href="#" title="">
+          <svg title="" viewBox="0 0 512 512">
+              <circle cx="256" cy="256" r="256"/>
+          </svg>
+          <span>Item #</span>
+      </a>
+  </nav>
+
+  <main>
+  <section>
+      <div id="container" class="container">
+        <chart-component *ngIf="loadComponent"></chart-component>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+
+<div id="content_map">
+  <div class="container">
+      <app-gmap></app-gmap>
     </div>
-  </section>
-</main>
+
+</div>

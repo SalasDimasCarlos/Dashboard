@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { ChartModule } from './chart/chart.module';
+import { MapModule } from './map/map.module';
 
 import { AppComponent } from './app.component';
 
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ChartModule
+    ChartModule,
+    MapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

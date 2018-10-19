@@ -157,7 +157,7 @@ export class ChartComponent implements AfterViewInit {
       $targets.each(function(i){
         if($(this).attr("id") != target)
         {
-          $(this).addClass("fadeOutUp animated");
+          //$(this).addClass("fadeOutUp animated");
         }
       });
       var $targets = $(".largest");
@@ -165,7 +165,7 @@ export class ChartComponent implements AfterViewInit {
       $targets.each(function(i){
         if($(this).attr("id") != target)
         {
-          $(this).addClass("fadeOutUp animated");
+          //$(this).addClass("fadeOutUp animated");
         }
       });
 
@@ -175,7 +175,7 @@ export class ChartComponent implements AfterViewInit {
             scrollTop: $(comp).offset().top
         }, 'slow');
       }, 1000);
-      
+
       let este = this;
       setTimeout(function() {
         if($(este).hasClass("active")){

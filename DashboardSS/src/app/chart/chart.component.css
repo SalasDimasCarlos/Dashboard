@@ -40,6 +40,7 @@ a{
   height: 15em;
   display: block;
   margin: 1em;
+  border: 1px solid #9e9e9e
 }
 
 .four:hover {
@@ -53,6 +54,7 @@ a{
   height: 15em;
   display: block;
   margin: 1em;
+  border: 1px solid #9e9e9e
 }
 
 .largest:hover {
@@ -87,6 +89,8 @@ a{
 /* GRID */
 
 .active {
+    /*transform: scale(4.4,2.2);
+    transition: 2s;*/
     width: 66em;
     height: 35em;
     -webkit-transition: width 1.5s, height 1.5s; /* For Safari 3.1 to 6.0 */

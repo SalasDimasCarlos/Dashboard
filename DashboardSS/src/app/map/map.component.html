@@ -1,0 +1,25 @@
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<h2>{{ title }}</h2>
+<div>
+<agm-map [latitude]="20.684697" [longitude]="-103.395303" [zoom]="10">
+  <agm-marker [latitude]="20.684697" [longitude]="-103.395303"
+  [iconUrl]="'assets/marker.png'">
+    <agm-info-window>Escuela Primaria Federal 1</agm-info-window>
+  </agm-marker>
+  <agm-marker [latitude]="20.784697" [longitude]="-103.145303"
+  [iconUrl]="'assets/marker.png'">
+    <agm-info-window>Escuela Primaria Federal 2</agm-info-window>
+  </agm-marker>
+
+  <agm-marker [latitude]="20.684697" [longitude]="-103.3785303"
+  [iconUrl]="'assets/marker.png'">
+    <agm-info-window>Escuela Primaria Federal 3</agm-info-window>
+  </agm-marker>
+
+  <agm-marker [latitude]="20.684697" [longitude]="-103.477303"
+  [iconUrl]="'assets/marker.png'">
+    <agm-info-window>Escuela Primaria Federal 4</agm-info-window>
+  </agm-marker>
+</agm-map>
+</div>
