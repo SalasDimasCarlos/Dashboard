@@ -10,11 +10,6 @@
 
 #content_map {
   width: 90%;
-  
-  margin-top: 2em;
-}
-
-#content_map {
   display: none;
 }
 
@@ -52,7 +47,6 @@ header {
 .container {
   display: flex;
   justify-content: center;
-  /*opacity: 0;*/
   padding-left: 5em;
   -webkit-transition:  opacity .5s linear;
   transition: opacity .5s linear;

@@ -1,25 +1,55 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<h2>{{ title }}</h2>
-<div>
-<agm-map [latitude]="20.684697" [longitude]="-103.395303" [zoom]="10">
-  <agm-marker [latitude]="20.684697" [longitude]="-103.395303"
-  [iconUrl]="'assets/marker.png'">
-    <agm-info-window>Escuela Primaria Federal 1</agm-info-window>
-  </agm-marker>
-  <agm-marker [latitude]="20.784697" [longitude]="-103.145303"
-  [iconUrl]="'assets/marker.png'">
-    <agm-info-window>Escuela Primaria Federal 2</agm-info-window>
-  </agm-marker>
 
-  <agm-marker [latitude]="20.684697" [longitude]="-103.3785303"
-  [iconUrl]="'assets/marker.png'">
-    <agm-info-window>Escuela Primaria Federal 3</agm-info-window>
-  </agm-marker>
+  <h2 style="padding-left: 10%;">{{ title }}</h2>
+<div class="container-map">
+  <div id="left-mapa-content">
+    <form class="" action="#" method="post">
 
-  <agm-marker [latitude]="20.684697" [longitude]="-103.477303"
-  [iconUrl]="'assets/marker.png'">
-    <agm-info-window>Escuela Primaria Federal 4</agm-info-window>
-  </agm-marker>
-</agm-map>
+      <h3>Ajuste</h3>
+      <label for="option1">Seleccionar Origen</label>
+      <select id="option1">
+        <option value="volvo">Escuela 1</option>
+        <option value="saab">Escuela 2</option>
+        <option value="opel">Escuela 3</option>
+        <option value="audi">Escuela 4</option>
+      </select>
+
+      <label for="option2">Seleccionar Destino</label>
+      <select id="option2">
+        <option value="volvo">Escuela 1</option>
+        <option value="saab">Escuela 2</option>
+        <option value="opel">Escuela 3</option>
+        <option value="audi">Escuela 4</option>
+      </select>
+
+      <button type="button" (click)="getDirection()">Ruta</button>
+
+    </form>
+  </div>
+  <div id="mapa-section">
+    <agm-map [latitude]="20.684697" [longitude]="-103.395303" [zoom]="10">
+      <agm-marker [latitude]="20.684697" [longitude]="-103.395303"
+      [iconUrl]="'assets/marker.png'">
+        <agm-info-window>Escuela Primaria Federal 1</agm-info-window>
+      </agm-marker>
+      <agm-marker [latitude]="20.784697" [longitude]="-103.145303"
+      [iconUrl]="'assets/marker.png'">
+        <agm-info-window>Escuela Primaria Federal 2</agm-info-window>
+      </agm-marker>
+
+      <agm-marker [latitude]="20.684697" [longitude]="-103.3785303"
+      [iconUrl]="'assets/marker.png'">
+        <agm-info-window>Escuela Primaria Federal 3</agm-info-window>
+      </agm-marker>
+
+      <agm-marker [latitude]="20.684697" [longitude]="-103.477303"
+      [iconUrl]="'assets/marker.png'">
+        <agm-info-window>Escuela Primaria Federal 4</agm-info-window>
+      </agm-marker>
+
+      <agm-direction *ngIf="directions" [origin]="origin" [destination]="destination">
+      </agm-direction>
+    </agm-map>
+  </div>
 </div>

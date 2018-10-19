@@ -1,5 +1,49 @@
+.container-map {
+  display: flex;
+  /*justify-content: center;*/
+  padding-left: 10%;
+}
+
 agm-map {
-  width: 800px !important;
+  width: 40em !important;
   margin: 0;
-  height: 20em;
+  height: 28em;
+}
+
+#left-mapa-content {
+  width: 40%;
+  float: left;
+  /*border: 1px solid #9e9e9e*/
+}
+
+#mapa-section {
+  width: 60%;
+  float: right;
+  /*border: 1px solid #9e9e9e*/
+}
+
+
+/* FORM */
+textarea,
+input {
+	outline: none;
+	border: none;
+}
+
+label {
+  display: block;
+  margin: .5em;
+}
+form {
+  width: 100%;
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+  -webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+  /*border: 1px solid #9e9e9e*/
 }
