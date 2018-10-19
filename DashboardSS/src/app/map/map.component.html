@@ -9,46 +9,45 @@
       <h3>Ajuste</h3>
       <label for="option1">Seleccionar Origen</label>
       <select id="option1">
-        <option value="volvo">Escuela 1</option>
-        <option value="saab">Escuela 2</option>
-        <option value="opel">Escuela 3</option>
-        <option value="audi">Escuela 4</option>
+        <option value="0" selected>Escuela 1</option>
+        <option value="1">Escuela 2</option>
+        <option value="2">Escuela 3</option>
+        <option value="3">Escuela 4</option>
       </select>
 
       <label for="option2">Seleccionar Destino</label>
       <select id="option2">
-        <option value="volvo">Escuela 1</option>
-        <option value="saab">Escuela 2</option>
-        <option value="opel">Escuela 3</option>
-        <option value="audi">Escuela 4</option>
+        <option value="0">Escuela 1</option>
+        <option value="1" selected>Escuela 2</option>
+        <option value="2">Escuela 3</option>
+        <option value="3">Escuela 4</option>
+        <option value="4">Escuela 5</option>
       </select>
 
       <button type="button" (click)="getDirection()">Ruta</button>
 
     </form>
+    <div id="myPanel" style="display: none;"></div>
+    <div class="infoRoute" *ngIf="infoRoute">
+      <br>
+      <span>Distancia:  {{ distance }}</span> <br><br>
+      <span>Tiempo a carro:  {{ time }}</span>
+    </div>
   </div>
   <div id="mapa-section">
     <agm-map [latitude]="20.684697" [longitude]="-103.395303" [zoom]="10">
-      <agm-marker [latitude]="20.684697" [longitude]="-103.395303"
-      [iconUrl]="'assets/marker.png'">
-        <agm-info-window>Escuela Primaria Federal 1</agm-info-window>
-      </agm-marker>
-      <agm-marker [latitude]="20.784697" [longitude]="-103.145303"
-      [iconUrl]="'assets/marker.png'">
-        <agm-info-window>Escuela Primaria Federal 2</agm-info-window>
-      </agm-marker>
 
-      <agm-marker [latitude]="20.684697" [longitude]="-103.3785303"
-      [iconUrl]="'assets/marker.png'">
-        <agm-info-window>Escuela Primaria Federal 3</agm-info-window>
-      </agm-marker>
+      <div *ngFor="let school of schools">
+        <agm-marker [latitude]="school.lat" [longitude]="school.long"
+        [iconUrl]="'assets/marker.png'">
+          <agm-info-window>{{school.name}}</agm-info-window>
+        </agm-marker>
+      </div>
 
-      <agm-marker [latitude]="20.684697" [longitude]="-103.477303"
-      [iconUrl]="'assets/marker.png'">
-        <agm-info-window>Escuela Primaria Federal 4</agm-info-window>
-      </agm-marker>
-
-      <agm-direction *ngIf="directions" [origin]="origin" [destination]="destination">
+      <agm-direction [visible]="directions" [origin]="origin" [destination]="destination"
+      [panel]="getPanel()"
+      [renderOptions]="renderOptions"
+      >
       </agm-direction>
     </agm-map>
   </div>

@@ -40,6 +40,8 @@ header {
 .item:hover {
   color: #000;
   background-color: #ccc;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
 }
 
 
