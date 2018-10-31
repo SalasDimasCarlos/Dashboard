@@ -139,11 +139,43 @@ export class ChartComponent implements AfterViewInit {
 
     }
 
+    function controlElements($targets, target)
+    {
+      $targets.each(function(i){
+
+        if($(this).attr("id") != target)
+        {
+
+          if($(this).hasClass("fadeOutUp"))
+          {
+            $(this).removeClass("fadeOutUp");
+            $(this).removeClass("animated");
+
+            let este = this;
+            setTimeout(function() {
+              $(este).css("display","block");
+              $(este).addClass("fadeInDown animated");
+            },1000);
+
+          } else {
+            $(this).addClass("fadeOutUp animated");
+
+            let este = this;
+            setTimeout(function() {
+              $(este).css("display","none");
+            },1000);
+          }
+
+        }
+      });
+
+
+    }
+
       $(".four").click(function () {
       var target = $(this).attr("id");
       //calculate(target);
       //console.log(target);
-
 
       if($(".active").attr("id") != target)
       {
@@ -152,22 +184,13 @@ export class ChartComponent implements AfterViewInit {
 
       }
 
+      // Des/aparecen elementos
       var $targets = $(".four");
+      controlElements($targets, target);
 
-      $targets.each(function(i){
-        if($(this).attr("id") != target)
-        {
-          //$(this).addClass("fadeOutUp animated");
-        }
-      });
       var $targets = $(".largest");
+      controlElements($targets, target);
 
-      $targets.each(function(i){
-        if($(this).attr("id") != target)
-        {
-          //$(this).addClass("fadeOutUp animated");
-        }
-      });
 
       var comp = this;
       setTimeout(function(){

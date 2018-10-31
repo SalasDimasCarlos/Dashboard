@@ -129,6 +129,7 @@ export class AppComponent {
               next.addClass("fadeInRight");
               next.addClass("animated");
           }
+          
         } else {
 
           var next = $("#content_page");
