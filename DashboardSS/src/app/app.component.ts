@@ -33,66 +33,6 @@ export class AppComponent {
     }
   }
 
-/*
-  initialize(setMap) {
-
-    var mapOptions;
-    var pyrmont = new google.maps.LatLng(20.684697,-103.395303);
-
-    /* MAP OPTIONS - MAP STYLE */
-/*    mapOptions = {
-      center: pyrmont,
-      zoom: 5,
-      mapTypeId: 'roadmap',
-      scrollwheel: false,
-      styles: [
-      {
-          "featureType": "road",
-          "elementType": "geometry",
-          "stylers": [
-              {
-                  "lightness": 100
-              },
-              {
-                  "visibility": "simplified"
-              }
-          ]
-      },
-      {
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [
-              {
-                  "visibility": "on"
-              },
-              {
-                  "color": "#C6E2FF"
-              }
-          ]
-      },
-      {
-          "featureType": "poi",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {
-                  "color": "#C5E3BF"
-              }
-          ]
-      },
-      {
-          "featureType": "road",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {
-                  "color": "#D1D1B8"
-              }
-          ]
-      }]
-    };
-
-
-  }*/
-
     public NextPage(val, xant) {
 
       if(this.now != xant)
@@ -129,7 +69,7 @@ export class AppComponent {
               next.addClass("fadeInRight");
               next.addClass("animated");
           }
-          
+
         } else {
 
           var next = $("#content_page");
