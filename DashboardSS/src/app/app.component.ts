@@ -9,144 +9,78 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Titulo del Sitio';
-  loadComponent = false;
-  anterior = 0;
-  intAnt = 0;
-  now = 1;
+  loadChart = true;
+  loadMap = false;
+  actual = "chart";
 
-  whichTransitionEvent(){
-    var t,
-        el = document.createElement("fakeelement");
-
-    var transitions = {
-      "transition"      : "transitionend",
-      "OTransition"     : "oTransitionEnd",
-      "MozTransition"   : "transitionend",
-      "WebkitTransition": "webkitTransitionEnd"
-    }
-
-    for (t in transitions){
-      if (el.style[t] !== undefined){
-        return transitions[t];
-      }
-    }
-  }
-
-    public NextPage(val, xant) {
-
-      if(this.now != xant)
+    public LoadChart() {
+      if(this.actual != "chart")
       {
-        if(this.anterior != 0)
-        {
-          //alert(this.anterior);
-          var before = $("#" + this.anterior);
-
-          var next = $("#"+ val);
-
-          if(xant < this.intAnt)
-          {
-            next.removeClass("fadeOutLeft");
-            next.removeClass("animated");
-
-            before.addClass("fadeOutRight");
-            before.addClass("animated");
-
-            next.addClass("fadeInLeft");
-            next.addClass("animated");
-
-            setTimeout(function() {
-              before.css("display","none");
-            },1000);
-          } else {
-              next.removeClass("fadeOutRight");
-              next.removeClass("animated");
-
-              before.addClass("fadeOutLeft");
-              before.addClass("animated");
-
-              next.css("display","block");
-              next.addClass("fadeInRight");
-              next.addClass("animated");
-          }
-
-        } else {
-
-          var next = $("#content_page");
-          next.addClass("fadeOutLeft");
-          next.addClass("animated");
-
-
-          next = $("#"+ val);
-          next.css("display", "block");
-          next.addClass("fadeInRight");
-          next.addClass("animated");
-        }
-
-        this.anterior = val;
-        this.intAnt = xant;
-        this.now = xant;
+          let este = this;
+          setTimeout(function() {
+                    este.loadChart = !este.loadChart;
+                    este.loadMap = !este.loadMap;
+          },1000);
+          this.actual = "chart";
       }
     }
 
-
-  public loadMyComponent() {
-    //
-    var transitionEvent = this.whichTransitionEvent();
-    let container = $("#container");
-
-    if(this.loadComponent == true)
-    {
-      container.removeClass('fadeInRight');
-      container.removeClass('animated');
-
-
-      container.addClass('bounceOut');
-      container.addClass('animated');
-
-      let este = this;
-      setTimeout(function() {
-                este.loadComponent = !este.loadComponent;
-      },1000);
-
-
-    } else {
-      this.loadComponent = !this.loadComponent;
-        setTimeout(function(){
-
-          container.addClass('fadeInRight');
-          container.addClass('animated');
-        }, 10);
-
-
-    }
-
-  }
-
-  public show() {
-
-      var open = document.getElementById('trigger-menu'),
-          target = document.getElementById('menu'),
-          container = document.getElementById('container');
-
-        open.classList.toggle('trigger');
-        target.classList.toggle('shown');
-
-        if(container != null)
-        {
-        container.classList.add('padding');
-        container.classList.toggle('grow-up');
-
-        setTimeout(function(){
-          container.classList.remove('padding');
+    public LoadMap() {
+      if(this.actual != "map")
+      {
+        let este = this;
+        setTimeout(function() {
+                  este.loadMap = !este.loadMap;
+                  este.loadChart = !este.loadChart;
         },1000);
+        this.actual = "map";
       }
 
-  }
+    }
 
-  ngAfterViewInit() {
+    ngAfterViewInit() {
 
-  }
+      let $anterior = $(".active");
+      var Panterior = "chart";
+
+      $("ul#change_page li").each(function() {
+
+        $(this).click(function(){
+                $($anterior).removeClass("active");
+                $(this).addClass("active");
+                $anterior = this;
+
+                let Pnueva = $(this).attr("id");
+                if(Pnueva != Panterior)
+                {
+                  //Desaparece
+                  $("#content_" + Panterior).removeClass("fadeIn");
+                  $("#content_" + Panterior).removeClass("animated");
+                  $("#content_" + Panterior).addClass("fadeOut animated");
+
+                  //Terminada la animacion
+                  setTimeout(function() {
+                            $("#content_" + Panterior).css("display","none");
+                            $("#content_" + Panterior).removeClass("fadeOut");
+                            $("#content_" + Panterior).removeClass("animated");
+                            $("#content_" + Pnueva).addClass("fadeIn animated");
+                            $("#content_" + Pnueva).css("display","block");
+                            Panterior = Pnueva;
+                  },1000);
+
+                  /*$("#content_" + Panterior).on(transitionEvent,
+                              function(event) {
+                                $(this).css("display","none");
+                                $(this).removeClass("fadeOut");
+                                $(this).removeClass("animated");
+                                //$("#content_" + Pnueva).addClass("fadeIn animated");
+                                $("#content_" + Pnueva).addClass("fadeIn animated");
+                 });*/
+               }
+              });
+
+      });
+    }
 
 
 
