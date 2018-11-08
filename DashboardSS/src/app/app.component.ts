@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import * as $ from 'jquery';
 
 //import {ExcelService} from './services/excel.service';
@@ -146,7 +146,9 @@ export class AppComponent {
 
   ngAfterViewInit() {
 
-
   }
+
+
+
 
 }

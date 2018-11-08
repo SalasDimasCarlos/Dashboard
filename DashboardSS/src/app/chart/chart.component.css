@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 10px;
 }
 
 .content {
@@ -12,7 +13,8 @@
 .heading {
   background-color: #ffffff;
   border-bottom: 1px solid #9e9e9e;
-  padding: .2em;
+  padding: .01em;
+  text-align: left;
 }
 
 h1, h2, h4, h5, h6, p{
@@ -28,7 +30,7 @@ h3 {
 
 p {
   color: #202124;
-  font-size: .8em;
+  font-size: .7em;
 }
 
 a{
@@ -36,10 +38,10 @@ a{
 }
 
 .four {
-	width: 15em;
-  height: 15em;
+	width: 11em;
+  height: 11em;
   display: block;
-  margin: 1em;
+  margin: .2em;
   border: 1px solid #9e9e9e;
 	transition: 500ms;
 	transition-timing-function: cubic-bezier(.25,.8,.25,1);
@@ -61,10 +63,10 @@ a{
 }
 
 .largest {
-  width: 32em;
-  height: 15em;
+  width: 22.4em;
+  height: 11em;
   display: block;
-  margin: 1em;
+  margin: .2em;
   border: 1px solid #9e9e9e;
 	transition: 500ms;
 	transition-timing-function: cubic-bezier(.25,.8,.25,1);
@@ -115,8 +117,8 @@ a{
 }
 
 .inactive {
-    width: 15em;
-    height: 15em;
+    width: 11em;
+    height: 11em;
     -webkit-transition: width 1s, height 1.5s; /* For Safari 3.1 to 6.0 */
     transition: width 1s, height 1s;
 }

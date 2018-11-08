@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");*/
+/*@import url("https://fonts.googleapis.com/icon?family=Material+Icons");*/
 
 .tabclear, grid:after {
   display: table;
@@ -649,10 +649,11 @@ main {
 }
 .top__nav ul li {
   display: inline-block;
-  padding: 18px 20px;
+  padding: 5px 20px;
   font-size: 13px;
   position: relative;
   border-right: 1px solid #eaeef3;
+  cursor: pointer;
 }
 .top__nav ul li:last-of-type {
   border-right: 0;
@@ -690,7 +691,7 @@ nav ul {
   margin-bottom: 20px;
 }
 nav ul li {
-  font-size: 14px;
+  font-size: .8em;
   padding: 8px 5px;
   position: relative;
 }
@@ -710,13 +711,14 @@ nav ul li .notice {
 }
 nav ul li .material-icons {
   margin-right: 5px;
-  font-size: 16px;
+  font-size: 1.5em;
 }
 nav ul li.sub {
-  font-size: 11px;
+  font-size: 1em;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
+  color: white;
 }
 nav ul li.active a {
   color: #fff;
@@ -728,6 +730,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #fff;
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   nav {
     width: 250px;

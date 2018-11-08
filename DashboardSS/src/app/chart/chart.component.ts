@@ -12,27 +12,27 @@ export class ChartComponent implements AfterViewInit {
 
   data: any = [{
   eid: 'item1',
-  ename: 'SOLICITUDES POR VALIDAR / ANALIZAR',
+  ename: 'SOLICITUDES POR VALIDAR', // analizar
   widget: 'pastel'
   },{
   eid: 'item2',
-  ename: 'SOLICITUDES EN NÓMINA Y FUERA DE NÓMINA',
+  ename: 'SOLICITUDES EN NÓMINA', // Y fuera de nomina
   widget: 'hey'
   },{
   eid: 'item3',
-  ename: 'NECESIDADES Y EXCEDENTES DE PERSONAL',
+  ename: 'NECESIDADES Y EXCEDENTES', // DE PERSONAL
   widget: 'hey'
   },{
   eid: 'item4',
-  ename: 'AUDITORÍA DE REVALIDACIONES',
+  ename: 'AUDITORÍA REVALIDACIONES',// DE
   widget: 'hey'
   },{
   eid: 'item5',
-  ename: 'SOLICITUDES POR CENTRO DE ADSCRIPCIÓN (BASE ENERO)',
+  ename: 'SOLICITUDES POR CENTRO', //DE ADSCRIPCIÓN (BASE ENERO)
   widget: 'hey'
   },{
   eid: 'item6',
-  ename: 'REGISTRO DE CONTRATACIÓN',
+  ename: 'REGISTRO CONTRATACIÓN', //de contra
   widget: 'hey'
   }];
 
