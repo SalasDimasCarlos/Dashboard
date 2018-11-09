@@ -1,168 +1,282 @@
 
-<div class="cards">
-		<div  id="{{data[0].eid}}" class="{{data[0].eid}} largest">
-		<div class="box">
-			<div class="heading">
-				<p>{{data[0].ename}}</p>
-			</div>
-			<div class="content_widget">
-				<pastel></pastel>
-				<h3>{{KPI1Data.length - 1}}</h3>
-			</div>
-			<div class="content">
-				<div style="height:30em; overflow:auto;">
-					<table class="minimalistBlack">
-						<thead>
-							<tr>
-									<th>{{KPI1Data[0].numero}}</th>
-									<th>{{KPI1Data[0].clave}}</th>
-									<th>{{KPI1Data[0].dias}}</th>
-									<th>{{KPI1Data[0].nivel}}</th>
-									<th>{{KPI1Data[0].DRSE}}</th>
-									<th>{{KPI1Data[0].motivo}}</th>
-							</tr>
-						</thead>
-							<tbody>
-									    <tr *ngFor="let item of KPI1Data;">
-													<th *ngIf="item != KPI1Data[0]">{{item.numero}}</th>
-													<th *ngIf="item != KPI1Data[0]">{{item.clave}}</th>
-													<th *ngIf="item != KPI1Data[0]">{{item.dias}}</th>
-													<th *ngIf="item != KPI1Data[0]">{{item.nivel}}</th>
-													<th *ngIf="item != KPI1Data[0]">{{item.DRSE}}</th>
-													<th *ngIf="item != KPI1Data[0]">{{item.motivo}}</th>
-									    </tr>
-							</tbody>
-					</table>
+
+	<div class="chart-body">
+
+		<!-- NUEVA FILA CON WIDGETS-->
+		<div class="row">
+      <div class="col-xl-3 col-md-6">
+          <div class="card prod-bar-card">
+              <div class="card-header">
+                  <h5>{{data[0].ename}}</h5>
+              </div>
+              <div class="card-block">
+                  <p>Junio - Julio</p>
+                  <div class="row text-center">
+                      <div class="col-6">
+                          <div id="pbc-1" class="pbc-chart" style="height: 50px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 50px; height: 50px;" width="50" height="50"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 12px; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 1px; text-align: center;">0</div><div style="position: absolute; max-width: 12px; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 31px; text-align: center;">5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 17px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 50px; height: 50px;" width="50" height="50"></canvas></div>
+                          <h6>5,480<i class="fas fa-caret-up m-l-10 text-c-green"></i></h6>
+                      </div>
+                      <div class="col-6">
+                          <div id="pbc-2" class="pbc-chart" style="height: 50px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 50px; height: 50px;" width="50" height="50"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 12px; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 1px; text-align: center;">0</div><div style="position: absolute; max-width: 12px; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 31px; text-align: center;">5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 50px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 17px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 50px; height: 50px;" width="50" height="50"></canvas></div>
+                          <h6>2,432<i class="fas fa-caret-down m-l-10 text-c-red"></i></h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+			      <div class="col-xl-3 col-md-6">
+			          <div class="card sale-card ">
+			              <div class="card-header">
+			                  <h5>Cancelación</h5>
+			              </div>
+			              <div class="card-block text-center">
+			                  <p>Junio - Julio</p>
+			                  <div class="row">
+			                      <div class="col-6">
+															<!--div class="s-caption bg-c-blue"></div-->
+			                          <i class="material-icons">check_circle</i>
+			                          <div class="s-cont d-inline-block">
+			                              <h5 class="f-w-700 m-b-0">6,507</h5>
+			                              <p class="m-b-0">Procedentes</p>
+			                          </div>
+			                      </div>
+			                      <div class="col-6 b-l-default">
+															<!--div class="s-caption bg-c-blue"></div-->
+			                          <i class="material-icons">block</i>
+			                          <div class="s-cont d-inline-block">
+			                              <h5 class="f-w-700 m-b-0">1,405</h5>
+			                              <p class="m-b-0">Cancelados</p>
+			                          </div>
+			                      </div>
+			                  </div>
+			              </div>
+			          </div>
+			      </div>
+
+      <div class="col-xl-3 col-md-6">
+          <div class="card sale-card ">
+              <div class="card-header">
+                  <h5>{{data[1].ename}}</h5>
+              </div>
+              <div class="card-block text-center">
+                  <div class="row">
+                      <div class="col-6">
+												<!--div class="s-caption bg-c-blue"></div-->
+                          <i class="material-icons">done</i>
+                          <div class="s-cont d-inline-block">
+                              <h5 class="f-w-700 m-b-0">56,207</h5>
+                              <p class="m-b-0">En Nómina</p>
+                          </div>
+                      </div>
+                      <div class="col-6 b-l-default">
+												<!--div class="s-caption bg-c-blue"></div-->
+                          <i class="material-icons">clear</i>
+                          <div class="s-cont d-inline-block">
+                              <h5 class="f-w-700 m-b-0">3,764</h5>
+                              <p class="m-b-0">Fuera de Nómina</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+	    <div class="col-md-12 col-xl-4">
+	        <div class="card card-red text-white">
+	            <div class="card-block p-b-0">
+	                <div class="row m-b-50">
+	                    <div class="col">
+	                        <h6 class="m-b-5">{{data[2].ename}}</h6>
+	                        <h5 class="m-b-0  f-w-700">42% Procedentes</h5>
+	                    </div>
+
+	                    <div class="col-auto text-center">
+												<br>
+	                        <p class="m-b-5">Redictaminados</p>
+	                        <h6 class="m-b-0">31%</h6>
+	                    </div>
+
+	                    <div class="col-auto text-center">
+												<br>
+	                        <p class="m-b-5">No Procedentes</p>
+	                        <h6 class="m-b-0">37%</h6>
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+		</div>
+
+					<!-- NUEVA FILA CON WIDGETS-->
+	<div class="row">
+	  <!-- income start -->
+    <div class="col-xl-4 col-md-6">
+        <div class="card o-hidden">
+            <div class="card-header">
+                <h5>{{data[3].ename}}</h5>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-4">
+                        <p class="text-muted m-b-5">Total</p>
+                        <h6>17,899</h6>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-muted m-b-5">Por DRSE</p>
+                        <h6>52.90%</h6>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-muted m-b-5">Por SEJ</p>
+                        <h6>41.10%</h6>
+                    </div>
+                </div>
+            </div>
+            <div id="sal-income" style="height: 100px; padding: 0px; position: relative;">
+              <canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas>
+              <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;">
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: center;">
+                    0.0
+                  </div>
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 58px; text-align: center;">
+                    2.5
+                  </div>
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 117px; text-align: center;">
+                    5.0
+                  </div>
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 175px; text-align: center;">7.5</div>
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 233px; text-align: center;">10.0</div>
+                  <div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 291px; text-align: center;">12.5</div>
+                </div>
+                <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;">
+                  <div style="position: absolute; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div>
+                  <div style="position: absolute; top: 67px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div>
+                  <div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div>
+                  <div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div>
+                </div>
+              </div>
+              <canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas>
+            </div>
+        </div>
+    </div>
+	  <div class="col-xl-4 col-md-6">
+	      <div class="card o-hidden">
+	          <div class="card-header">
+	              <h5>{{data[4].ename}}</h5>
+	          </div>
+	          <div class="card-block">
+	              <div class="row">
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Overall</p>
+	                      <h6>68.52%</h6>
+	                  </div>
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Monthly</p>
+	                      <h6>28.90%</h6>
+	                  </div>
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Day</p>
+	                      <h6>13.50%</h6>
+	                  </div>
+	              </div>
+	          </div>
+	          <div id="rent-income" style="height: 100px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: center;">0.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 58px; text-align: center;">2.5</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 117px; text-align: center;">5.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 175px; text-align: center;">7.5</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 233px; text-align: center;">10.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 291px; text-align: center;">12.5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 67px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas></div>
+	      </div>
+	  </div>
+	  <div class="col-xl-4 col-md-12">
+	      <div class="card o-hidden">
+	          <div class="card-header">
+	              <h5>{{data[5].ename}}</h5>
+	          </div>
+	          <div class="card-block">
+	              <div class="row">
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Overall</p>
+	                      <h6>68.52%</h6>
+	                  </div>
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Monthly</p>
+	                      <h6>28.90%</h6>
+	                  </div>
+	                  <div class="col-4">
+	                      <p class="text-muted m-b-5">Day</p>
+	                      <h6>13.50%</h6>
+	                  </div>
+	              </div>
+	          </div>
+	          <div id="income-analysis" style="height: 100px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: center;">0.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 58px; text-align: center;">2.5</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 117px; text-align: center;">5.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 175px; text-align: center;">7.5</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 233px; text-align: center;">10.0</div><div style="position: absolute; max-width: 43px; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 291px; text-align: center;">12.5</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"><div style="position: absolute; top: 100px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">0</div><div style="position: absolute; top: 67px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">10</div><div style="position: absolute; top: 33px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">20</div><div style="position: absolute; top: 0px; font: 400 0px/0px &quot;Open Sans&quot;, sans-serif; color: transparent; left: 0px; text-align: right;">30</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 303px; height: 100px;" width="303" height="100"></canvas></div>
+	      </div>
+	  </div>
+	  <!-- income end -->
+	</div>
+
+
+				<!-- NUEVA FILA CON WIDGETS-->
+				<div class="row">
+					<div class="col-xl-3 col-md-6">
+					  <div class="card card-yellow st-cir-card text-white">
+					      <div class="card-block">
+					          <div class="row align-items-center">
+					              <div class="col-auto">
+					                  <div id="status-round-1" class="chart-shadow st-cir-chart" style="width:80px;height:80px">
+					                      <h5>42%</h5>
+					                  <svg ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-donut" style="width: 100%; height: 100%;"><g class="ct-series ct-series-a"><path d="M56.25,68.146A32.5,32.5,0,0,0,40,7.5" class="ct-slice-donut" value="5" style="stroke-width: 5px;"></path></g><g class="ct-series ct-series-b"><path d="M40,7.5A32.5,32.5,0,1,0,56.348,68.089" class="ct-slice-donut" value="7" style="stroke-width: 5px;"></path></g></svg></div>
+					              </div>
+					              <div class="col text-center">
+					                  <h3 class=" f-w-700 m-b-5">788</h3>
+					                  <h6 class="m-b-0 ">Goal</h6>
+					              </div>
+					          </div>
+					      </div>
+					  </div>
+					</div>
+
+	        <div class="col-xl-3 col-md-6">
+	            <div class="card card-blue st-cir-card text-white">
+	                <div class="card-block">
+	                    <div class="row align-items-center">
+	                        <div class="col-auto">
+	                            <div id="status-round-2" class="chart-shadow st-cir-chart" style="width:80px;height:80px">
+	                                <h5>56%</h5>
+	                            <svg ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-donut" style="width: 100%; height: 100%;"><g class="ct-series ct-series-a"><path d="M23.75,68.146A32.5,32.5,0,1,0,40,7.5" class="ct-slice-donut" value="7" style="stroke-width: 5px;"></path></g>
+	                              <g class="ct-series ct-series-b"><path d="M40,7.5A32.5,32.5,0,0,0,23.848,68.202" class="ct-slice-donut" value="5" style="stroke-width: 5px;"></path></g></svg></div>
+	                        </div>
+	                        <div class="col text-center">
+	                            <h3 class="f-w-700 m-b-5">102</h3>
+	                            <h6 class="m-b-0">Goals</h6>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+		      <div class="col-xl-3 col-md-6">
+		          <div class="card sale-card">
+		              <div class="card-header">
+		                  <h5>Sales Statistics</h5>
+		              </div>
+		              <div class="card-block text-center">
+
+		                  <div class="row">
+		                      <div class="col-6">
+		                          <h5 class="f-w-700 m-b-0">5,632</h5>
+		                          <p class="m-b-0">Weekly</p>
+		                      </div>
+		                      <div class="col-6 b-l-default">
+		                          <h5 class="f-w-700 m-b-0">23,131</h5>
+		                          <p class="m-b-0">Monthly</p>
+		                      </div>
+		                  </div>
+		              </div>
+		          </div>
+		      </div>
+
 				</div>
-			</div>
-		</div>
+
+
+	<!-- FINAL DIV CHART BODY-->
 	</div>
-
-	<div  id="{{data[1].eid}}" class="{{data[1].eid}} four">
-	<div class="box">
-		<div class="heading">
-			<p>{{data[1].ename}}</p>
-		</div>
-		<div class="content_widget">
-			<pastel></pastel>
-			<h3>{{KRI1Data[0].cantidad}} Fuera de Nómina</h3>
-
-		</div>
-		<div class="content">
-			<lineadatos></lineadatos>
-		</div>
-
-	</div>
-</div>
-
-	<div  id="{{data[2].eid}}" class="{{data[2].eid}} largest">
-	<div class="box">
-		<div class="heading">
-			<p>{{data[2].ename}}</p>
-		</div>
-			<div class="content_widget">
-				<h3>42% Procedentes</h3>
-				<h3>37% No Procedentes</h3>
-				<h3>31% Redictaminados</h3>
-			<progress value="30" max="100">30%</progress>
-				<!--div class="footer">
-					<div class="">
-						Hola
-					</div>
-					<div class="">
-						que
-					</div>
-					<div class="">
-						tal
-					</div>
-				</div-->
-
-			</div>
-			<div class="content">
-					<combinada></combinada>
-			</div>
-		</div>
-	</div>
-
-<div  id="{{data[3].eid}}" class="{{data[3].eid}} largest">
-<div class="box">
-	<div class="heading">
-		<p>{{data[3].ename}}</p>
-	</div>
-	<div class="content_widget">
-		<pastel></pastel>
-		<h3>725 Revalidaciones</h3>
-	</div>
-	<div class="content">
-
-	</div>
-
-</div>
-</div>
-
-<div  id="{{data[4].eid}}" class="{{data[4].eid}} largest">
-<div class="box">
-	<div class="heading">
-		<p>{{data[4].ename}}</p>
-	</div>
-	<div class="content_widget">
-		<pastel></pastel>
-		<h3>183 Registros</h3>
-	</div>
-	<div class="content">
-
-	</div>
-
-	</div>
-</div>
-
-<div  id="{{data[5].eid}}" class="{{data[5].eid}} four">
-<div class="box">
-	<div class="heading">
-		<p>{{data[5].ename}}</p>
-	</div>
-	<div class="content_widget">
-		<pastel></pastel>
-		<h3>42% de los Trámites</h3>
-	</div>
-	<div class="content">
-
-	</div>
-
-</div>
-</div>
-
-	<div *ngFor="let item of data; let first = first">
-		<div  id="{{item.eid}}1" class="{{item.eid}} four">
-		<div class="box">
-			<div class="heading">
-				<p>{{item.ename}}</p>
-			</div>
-			<div class="content_widget">
-				<h3>Lorem ipsum dolor sit amet, consectetur</h3>
-			</div>
-			<div class="content">
-
-			</div>
-		</div>
-	</div>
-
-</div>
-
-</div>
-
-
-<!--div class="cards">
-	<div *ngFor="let item of data; let first = first">
-		<div  id="{{item.eid}}" class="{{item.eid}} four">
-		<div class="box">
-			<div class="heading">
-				<p>{{item.ename}}</p>
-			</div>
-					<pastel></pastel>
-		</div>
-	</div>
-
-</div>
-
-</div-->

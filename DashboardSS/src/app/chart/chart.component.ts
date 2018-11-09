@@ -12,27 +12,27 @@ export class ChartComponent implements AfterViewInit {
 
   data: any = [{
   eid: 'item1',
-  ename: 'SOLICITUDES POR VALIDAR', // analizar
+  ename: 'Trámites', // analizar
   widget: 'pastel'
   },{
   eid: 'item2',
-  ename: 'SOLICITUDES EN NÓMINA', // Y fuera de nomina
+  ename: 'Solicitudes Nómina', // Y fuera de nomina
   widget: 'hey'
   },{
   eid: 'item3',
-  ename: 'NECESIDADES Y EXCEDENTES', // DE PERSONAL
+  ename: 'Necesidades y Excedentes', // DE PERSONAL
   widget: 'hey'
   },{
   eid: 'item4',
-  ename: 'AUDITORÍA REVALIDACIONES',// DE
+  ename: 'Auditoría de Revalidaciones',// DE
   widget: 'hey'
   },{
   eid: 'item5',
-  ename: 'SOLICITUDES POR CENTRO', //DE ADSCRIPCIÓN (BASE ENERO)
+  ename: 'Solicitudes por Centro de Adscripción', //DE ADSCRIPCIÓN (BASE ENERO)
   widget: 'hey'
   },{
   eid: 'item6',
-  ename: 'REGISTRO CONTRATACIÓN', //de contra
+  ename: 'Registro de Contratación', //de contra
   widget: 'hey'
   }];
 
@@ -42,7 +42,7 @@ export class ChartComponent implements AfterViewInit {
     cantidad: 26345,
   }]
 
-  ngOnInit() {
+/*  ngOnInit() {
 
     let KPI1Data = [];
 
@@ -106,7 +106,7 @@ export class ChartComponent implements AfterViewInit {
     });
 
 
-    }
+  }*/
 
   ngAfterViewInit() {
 
@@ -145,6 +145,9 @@ export class ChartComponent implements AfterViewInit {
 
         if($(this).attr("id") != target)
         {
+          /*$(this).fadeTo( "slow" , 0.3, function() {
+            // Animation complete.
+          });*/
 
           if($(this).hasClass("fadeOutUp"))
           {
@@ -179,7 +182,7 @@ export class ChartComponent implements AfterViewInit {
 
       if($(".active").attr("id") != target)
       {
-        $(".active").addClass("inactive");
+        //$(".active").addClass("inactive");
         $(".active").removeClass("active");
 
       }
@@ -203,11 +206,11 @@ export class ChartComponent implements AfterViewInit {
       setTimeout(function() {
         if($(este).hasClass("active")){
           $(este).removeClass("active");
-          $(este).addClass("inactive");
+          //$(este).addClass("inactive");
           timer(este, true);
 
         } else {
-          $(este).removeClass("inactive");
+          //$(este).removeClass("inactive");
           $(este).addClass("active");
           timer(este, false);
 

@@ -1,6 +1,17 @@
 /*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");*/
 /*@import url("https://fonts.googleapis.com/icon?family=Material+Icons");*/
 
+
+#content_map {
+  width: 60%;
+}
+
+main,
+section {
+  background-color: white !important;
+}
+
+
 .tabclear, grid:after {
   display: table;
   content: " ";
@@ -649,7 +660,7 @@ main {
 }
 .top__nav ul li {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 15px 20px;
   font-size: 13px;
   position: relative;
   border-right: 1px solid #eaeef3;
@@ -675,7 +686,7 @@ nav {
   position: fixed;
   z-index: 1;
   background-color: #373a47;
-  width: 300px;
+  width: 260px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
