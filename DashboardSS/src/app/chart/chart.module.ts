@@ -4,6 +4,7 @@ import { ChartComponent } from './chart.component';
 import { ComboModule } from './combinada/module';
 import { LineModule } from './lineadatos/module';
 import { PieModule } from './pastel/module';
+import { PopUpModule } from './content/popup.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PieModule } from './pastel/module';
     BrowserModule,
     ComboModule,
     LineModule,
-    PieModule
+    PieModule,
+    PopUpModule
   ],
   providers: []
 })

@@ -9,6 +9,7 @@ import * as $ from 'jquery';
 
 export class ChartComponent implements AfterViewInit {
   title = 'Chart';
+  popup = false;
 
   data: any = [{
   eid: 'item1',
@@ -139,16 +140,16 @@ export class ChartComponent implements AfterViewInit {
 
     }
 
-    function controlElements($targets, target)
+    function controlElements($targets, target, cant)
     {
       $targets.each(function(i){
 
-        if($(this).attr("id") != target)
-        {
-          /*$(this).fadeTo( "slow" , 0.3, function() {
+        //if($(this).attr("id") != target)
+        //{
+          $(this).fadeTo( "fast" , cant, function() {
             // Animation complete.
-          });*/
-
+          });
+          /*
           if($(this).hasClass("fadeOutUp"))
           {
             $(this).removeClass("fadeOutUp");
@@ -167,34 +168,48 @@ export class ChartComponent implements AfterViewInit {
             setTimeout(function() {
               $(este).css("display","none");
             },1000);
-          }
+          }*/
 
-        }
+        //}
       });
 
 
     }
 
-      $(".four").click(function () {
+    $('.pop-up .close').click(function(){
+      $('.pop-up').removeClass('open');
+
+      var $targets = $(".card");
+      controlElements($targets, 0, 1);
+
+    });
+
+      $(".card").click(function () {
+
+        $('.pop-up').addClass('open');
+
+        /*setTimeout(function(){
+            $('html,body').animate({
+              scrollTop: $('.pop-up').offset().top
+          }, 'slow');
+        }, 500);*/
+
       var target = $(this).attr("id");
       //calculate(target);
       //console.log(target);
 
-      if($(".active").attr("id") != target)
-      {
+      //if($(".active").attr("id") != target)
+      //{
         //$(".active").addClass("inactive");
-        $(".active").removeClass("active");
+        //$(".active").removeClass("active");
 
-      }
+      //}
 
       // Des/aparecen elementos
-      var $targets = $(".four");
-      controlElements($targets, target);
+      var $targets = $(".card");
+      controlElements($targets, target, 0);
 
-      var $targets = $(".largest");
-      controlElements($targets, target);
-
-
+      /*
       var comp = this;
       setTimeout(function(){
           $('html,body').animate({
@@ -215,7 +230,7 @@ export class ChartComponent implements AfterViewInit {
           timer(este, false);
 
         }
-      },1000);
+      },1000);*/
 
     });
   }

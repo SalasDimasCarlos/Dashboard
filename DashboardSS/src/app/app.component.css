@@ -8,7 +8,7 @@
 
 main,
 section {
-  background-color: white !important;
+  background-color: #fafafa !important;
 }
 
 
@@ -761,7 +761,7 @@ nav ul li a:hover {
   }
   nav ul {
     text-align: center;
-    margin-left: -38px;
+    /*margin-left: -38px;*/
   }
   nav ul li.sub {
     display: none;

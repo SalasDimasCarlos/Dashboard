@@ -58,7 +58,8 @@ File: style.css
     position: relative;
     z-index: 5; }
 .card-red::after {
-  background: #FF5370; }
+  background: #e53935; }
+  /*background: #FF5370; }*/
 .card-red .ct-line {
   stroke: #fff; }
 .card-red .ct-grid {
