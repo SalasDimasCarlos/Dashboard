@@ -1,0 +1,53 @@
+167454	155	SECUNDARIA	CENTRO 1	43. Licencia sin Goce de Sueldo
+172082	117	SECUNDARIA	CENTRO 1	43. Licencia sin Goce de Sueldo
+177816	32	PREESCOLAR	ALTOS SUR	43. Licencia sin Goce de Sueldo
+178002	28	SECUNDARIA	COSTA-SIERRA OCCIDENTAL	37. Baja por Pasar a Otro Empleo
+178190	24	PREESCOLAR	CENTRO 2	07. Vacante temporal por Cambio de Actividad
+178195	24	PREESCOLAR	COSTA-SIERRA OCCIDENTAL	37. Baja por Pasar a Otro Empleo
+178199	24	PREESCOLAR	COSTA-SIERRA OCCIDENTAL	37. Baja por Pasar a Otro Empleo
+178344	23	PREESCOLAR	CENTRO 2	97. Licencia de 2 años por promoción del SPD
+178422	22	PRIMARIA	COSTA-SIERRA OCCIDENTAL	02. Término de Contrato (Renovación)
+178513	21	PRIMARIA	CENTRO 2	07. Vacante temporal por Cambio de Actividad
+178516	21	SECUNDARIA	CENTRO 1	43. Licencia sin Goce de Sueldo
+178656	19	PREESCOLAR	SURESTE	01. Licencia Médica
+178738	18	PRIMARIA	ALTOS SUR	42. Licencia por pasar a otro empleo
+178836	16	PRIMARIA	CENTRO 2	37. Baja por Pasar a Otro Empleo
+178838	16	PRIMARIA	CENTRO 2	97. Licencia de 2 años por promoción del SPD
+178930	15	PRIMARIA	COSTA SUR	01. Licencia Médica
+179024	13	SECUNDARIA	CENTRO 2	33. Baja por Jubilación o Pensión
+179086	11	PRIMARIA	ALTOS NORTE	01. Licencia Médica
+179176	9	SECUNDARIA	SIERRA DE AMULA	39. Baja por Regularización de Plantilla
+179178	9	SECUNDARIA	SIERRA DE AMULA	39. Baja por Regularización de Plantilla
+179202	8	PREESCOLAR	COSTA SUR	48. Licencia Prepensionaria
+179217	8	PRIMARIA	CENTRO 1	48. Licencia Prepensionaria
+179222	8	SECUNDARIA	CENTRO 2	43. Licencia sin Goce de Sueldo
+179287	6	TELESECUNDARIA	ALTOS NORTE	07. Vacante temporal por Cambio de Actividad
+179324	4	PRIMARIA	CENTRO 1	42. Licencia por pasar a otro empleo
+179325	4	PREESCOLAR	ALTOS NORTE	01. Licencia Médica
+179326	4	PRIMARIA	CENTRO 1	32. Baja por Renuncia
+179327	4	PREESCOLAR	ALTOS NORTE	01. Licencia Médica
+179329	4	PREESCOLAR	CENTRO 2	37. Baja por Pasar a Otro Empleo
+179330	4	PREESCOLAR	CENTRO 2	01. Licencia Médica
+179332	4	PREESCOLAR	CENTRO 1	42. Licencia por pasar a otro empleo
+179333	4	PRIMARIA	CENTRO 3	97. Licencia de 2 años por promoción del SPD
+179341	4	PRIMARIA	CENTRO 3	44. Licencia por Gravidez
+179343	4	PREESCOLAR	ALTOS NORTE	41.  Licencia Asuntos particulares sin sueldo
+179350	4	PRIMARIA	CENTRO 3	01. Licencia Médica
+179354	3	SECUNDARIA	CENTRO 2	43. Licencia sin Goce de Sueldo
+179355	3	PRIMARIA	CENTRO 1	48. Licencia Prepensionaria
+179359	3	SECUNDARIA	SUR	37. Baja por Pasar a Otro Empleo
+179362	3	OTROS	CENTRO 1	31. Baja por  Defunción
+179363	3	OTROS	CENTRO 1	31. Baja por  Defunción
+179367	3	PREESCOLAR	ALTOS NORTE	01. Licencia Médica
+179368	3	PREESCOLAR	ALTOS NORTE	01. Licencia Médica
+179371	3	PREESCOLAR	NORTE	48. Licencia Prepensionaria
+179372	3	SECUNDARIA	CENTRO 3	33. Baja por Jubilación o Pensión
+179373	3	SECUNDARIA	CENTRO 3	33. Baja por Jubilación o Pensión
+179381	3	PRIMARIA	CENTRO 1	42. Licencia por pasar a otro empleo
+179382	3	SECUNDARIA	CENTRO 3	42. Licencia por pasar a otro empleo
+179383	3	PRIMARIA	ALTOS NORTE	01. Licencia Médica
+179385	3	PRIMARIA	SUR	32. Baja por Renuncia
+179386	3	SECUNDARIA	CENTRO 3	42. Licencia por pasar a otro empleo
+179387	3	PREESCOLAR	CENTRO 1	07. Vacante temporal por Cambio de Actividad
+179388	3	PRIMARIA	ALTOS NORTE	37. Baja por Pasar a Otro Empleo
+179389	3	PRIMARIA	COSTA-SIERRA OCCIDENTAL	44. Licencia por Gravidez
